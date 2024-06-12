@@ -1,0 +1,139 @@
+/* Genel ayarlar */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Başlık kısmı */
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    flex: 1;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.header-content {
+    flex: 2;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #00aaff;
+}
+
+.header-content p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.header-content a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.header-content a:hover {
+    text-decoration: underline;
+}
+
+/* Bölüm başlıkları */
+h2 {
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 10px;
+    color: #00aaff;
+    margin-top: 40px;
+}
+
+/* İş ve okul kartları */
+.job, .school, .language, .certification, .project, .award, .volunteer, .hobby, .reference {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.job h3, .school h3, .project h3, .award h3, .volunteer h3, .hobby h3, .reference h3 {
+    margin: 0;
+    color: #00aaff;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-content {
+        padding-left: 0;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
